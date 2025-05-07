@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+section {
+  padding: 2rem;
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+h5 {
+  text-align: center;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-section {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  line-height: 1.6;
+}
+
+.contact-section p {
+  margin: 0.5rem 0;
+}
+
+.contact-section p:first-child {
+  font-size: 1.8rem;
+  color: #007acc;
+  font-weight: 700;
+}
+
+.contact-section a {
+  color: #007acc;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  color: #005999;
+  text-decoration: underline;
+}
+
+.site-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  background-color: #f4f4f4;
+}
+
+.site-footer p {
+  margin: 0.3rem 0;
+}
+
+.site-footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #333;
+  text-decoration: underline;
+}
