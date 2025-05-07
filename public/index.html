@@ -11,7 +11,69 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-  </head>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.0/firebase-app.js";
+      import {
+        getDatabase,
+        ref,
+        onValue,
+        runTransaction,
+        set,
+        get,
+      } from "https://www.gstatic.com/firebasejs/11.7.0/firebase-database.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAgr6yJwR8hSCyzP-YuSm7x0jyG6gauV48",
+        authDomain: "mokytojai-mokytojams.firebaseapp.com",
+        databaseURL:
+          "https://mokytojai-mokytojams-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "mokytojai-mokytojams",
+        storageBucket: "mokytojai-mokytojams.firebasestorage.app",
+        messagingSenderId: "1034426927970",
+        appId: "1:1034426927970:web:19115cc4b4496dde123a3b",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+
+      window.incrementCounter = function (id, field) {
+        const fieldRef = ref(db, `counters/${id}/${field}`);
+        runTransaction(fieldRef, (current) => (current || 0) + 1);
+      };
+
+      function updateDOM(id, field, value) {
+        const el = document.getElementById(
+          `${id}-${field === "downloads" ? 1 : 2}`
+        );
+        if (el) el.textContent = value;
+      }
+
+      function listenToCounter(id) {
+        const counterRef = ref(db, `counters/${id}`);
+        onValue(counterRef, (snap) => {
+          const data = snap.val();
+          if (!data) return;
+          if (data.downloads !== undefined)
+            updateDOM(id, "downloads", data.downloads);
+          if (data.views !== undefined) updateDOM(id, "views", data.views);
+        });
+      }
+
+      function initializeCounter(id) {
+        const counterRef = ref(db, `counters/${id}`);
+        get(counterRef).then((snap) => {
+          if (!snap.exists()) {
+            set(counterRef, { downloads: 0, views: 0 });
+          }
+        });
+      }
+
+      ["id1", "id2"].forEach((id) => {
+        initializeCounter(id);
+        listenToCounter(id);
+      });
+    </script>
+</head>
   <body>
     <div class="container">
       <header class="site-header">
@@ -26,6 +88,7 @@
               >) arba Rokui (<a href="mailto:info@edup.lt">info@edup.lt</a>)
             </p>
           </div>
+
         </div>
       </header>
 
@@ -50,17 +113,22 @@
                 <a
                   href="./Funkcijų-konspektas-(autorė-Z.-Šiaulienė).pdf"
                   class="btn btn-preview"
+                  onclick="incrementCounter('id1', 'views')"
                 >
                   <span class="btn-icon">&#128065;</span>
                   Peržiūrėti
+                  <span id="id1-2">(...)</span>
                 </a>
                 <a
                   download
                   href="./Funkcijų-konspektas-(autorė-Z.-Šiaulienė).pdf"
                   class="btn btn-download"
+                  onclick="incrementCounter('id1', 'downloads')"
+
                 >
                   <span class="btn-icon">&#8595;</span>
                   Atsisiųsti
+                  <span id="id1-1">(...)</span>
                 </a>
               </div>
             </div>
@@ -81,17 +149,23 @@
                 <a
                   href="./Mokyklinės-planimetrijos-konspektas-(autorė-Z.-Šiaulienė).pdf"
                   class="btn btn-preview"
+                  onclick="incrementCounter('id2', 'views')"
+
                 >
                   <span class="btn-icon">&#128065;</span>
                   Peržiūrėti
+                  <span id="id2-2">(...)</span>
                 </a>
                 <a
                   download
                   href="./Mokyklinės-planimetrijos-konspektas-(autorė-Z.-Šiaulienė).pdf"
                   class="btn btn-download"
+                  onclick="incrementCounter('id2', 'downloads')"
+
                 >
                   <span class="btn-icon">&#8595;</span>
                   Atsisiųsti
+                  <span id="id2-1">(...)</span>
                 </a>
               </div>
             </div>
