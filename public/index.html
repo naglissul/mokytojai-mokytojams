@@ -1,48 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Konspektai - Mokytojai mokytojams</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>Mokytojai mokytojams - Konspektai</h1>
-      <p>
-        Norintys pasidalinti, kad čia būtų, rašykite Nagliui
-        <a href="mailto:naglis.suliokas@gmail.com">naglis.suliokas@gmail.com</a>
-        arba Rokui <a href="mailto:info@edup.lt">info@edup.lt</a>.
-      </p>
-    </header>
-    <main>
-      <section>
-        <h2>Matematikos konspektai</h2>
-        <h3>Funkcijos</h3>
-        <p><em>Atnaujinta 2025-05-07</em></p>
-        <p>
-          Nurodytos visų funkcijų apibrėžimo ir reikšmių sritys, eskizai. Autorė
-          Z. Šiaulienė
-        </p>
-        <a href="./Funkcijų-konspektas-(autorė-Z.-Šiaulienė).pdf"
-          >Peržiūrėti</a
-        >
-        <a download href="./Funkcijų-konspektas-(autorė-Z.-Šiaulienė).pdf"
-        >Atsisiųsti</a
-      >
-      </section>
-    </main>
-    <footer class="site-footer">
-      <p>Autorinės teisės priklauso paminėtiems autoriams</p>
-      <p>Kontaktai: Naglis
-        <a href="mailto:naglis.suliokas@gmail.com">naglis.suliokas@gmail.com</a>
-        ir Rokas <a href="mailto:info@edup.lt">info@edup.lt</p>
-      <p>
-        Tinklapio kodas:
-        <a href="https://github.com/naglissul/mokytojai-mokytojams"
-          >https://github.com/naglissul/mokytojai-mokytojams</a
-        >
-      </p>
-    </footer>
+    <div class="container">
+      <header class="site-header">
+        <div class="header-content">
+          <h1>Mokytojai mokytojams</h1>
+          <p class="tagline">Dalijamės žiniomis, auginame ateitį</p>
+          <div class="header-contact">
+            <p>
+              Norite pasidalinti mokomąja medžiaga? Rašykite: Nagliui (<a
+                href="mailto:naglis.suliokas@gmail.com"
+                >naglis.suliokas@gmail.com</a
+              >) arba Rokui (<a href="mailto:info@edup.lt">info@edup.lt</a>)
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="resources-section">
+          <h2>Medžiagos biblioteka</h2>
+
+          <div class="resource-card">
+            <div class="resource-info">
+              <div class="resource-header">
+                <span class="resource-category">Matematika</span>
+              </div>
+              <h4>Funkcijos</h4>
+              <p class="resource-meta">
+                <span class="update-date">Atnaujinta 2025-05-07</span>
+              </p>
+              <p class="resource-description">
+                Nurodytos visų funkcijų apibrėžimo ir reikšmių sritys, eskizai.
+                Autorė Z. Šiaulienė
+              </p>
+              <div class="resource-actions">
+                <a
+                  href="./Funkcijų-konspektas-(autorė-Z.-Šiaulienė).pdf"
+                  class="btn btn-preview"
+                >
+                  <span class="btn-icon">&#128065;</span>
+                  Peržiūrėti
+                </a>
+                <a
+                  download
+                  href="./Funkcijų-konspektas-(autorė-Z.-Šiaulienė).pdf"
+                  class="btn btn-download"
+                >
+                  <span class="btn-icon">&#8595;</span>
+                  Atsisiųsti
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-info">
+              <div class="resource-header">
+                <span class="resource-category">Matematika</span>
+              </div>
+              <h4>Planimetrija</h4>
+              <p class="resource-meta">
+                <span class="update-date">Atnaujinta 2025-05-07</span>
+              </p>
+              <p class="resource-description">
+                Mokyklinės planimetrijos konspektas. Sukurta 2012 m. Autorė Z. Šiaulienė
+              </p>
+              <div class="resource-actions">
+                <a
+                  href="./Mokyklinės-planimetrijos-konspektas-(autorė-Z.-Šiaulienė).pdf"
+                  class="btn btn-preview"
+                >
+                  <span class="btn-icon">&#128065;</span>
+                  Peržiūrėti
+                </a>
+                <a
+                  download
+                  href="./Mokyklinės-planimetrijos-konspektas-(autorė-Z.-Šiaulienė).pdf"
+                  class="btn btn-download"
+                >
+                  <span class="btn-icon">&#8595;</span>
+                  Atsisiųsti
+                </a>
+              </div>
+            </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-content">
+          <p>Autorinės teisės priklauso paminėtiems autoriams</p>
+          <p>
+            Kontaktai: Naglis
+            <a href="mailto:naglis.suliokas@gmail.com"
+              >naglis.suliokas@gmail.com</a
+            >
+            ir Rokas <a href="mailto:info@edup.lt">info@edup.lt</a>
+          </p>
+          <p>
+            Tinklapio kodas:
+            <a
+              href="https://github.com/naglissul/mokytojai-mokytojams"
+              target="_blank"
+            >
+              github.com/naglissul/mokytojai-mokytojams
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
