@@ -68,7 +68,7 @@
         });
       }
 
-      ["id1", "id2"].forEach((id) => {
+      ["id1", "id2", "id3"].forEach((id) => {
         initializeCounter(id);
         listenToCounter(id);
       });
@@ -81,20 +81,62 @@
           <h1>Mokytojai mokytojams</h1>
           <p class="tagline">Dalijamės žiniomis, auginame ateitį</p>
           <div class="header-contact">
-            <p>
-              Norite pasidalinti mokomąja medžiaga? Rašykite: Nagliui (<a
-                href="mailto:naglis.suliokas@gmail.com"
-                >naglis.suliokas@gmail.com</a
-              >) arba Rokui (<a href="mailto:info@edup.lt">info@edup.lt</a>)
-            </p>
+            <div>
+              <p>Norite pasidalinti mokomąja medžiaga? Susisiekite su mumis:</p>
+              <p><strong>Naglis Šuliokas</strong> – <a href="mailto:naglis.suliokas@gmail.com">naglis.suliokas@gmail.com</a></p>
+              <p><strong>Rokas Rutkus</strong> – <a href="mailto:info@edup.lt">info@edup.lt</a></p>
+            </div>                    
           </div>
 
         </div>
       </header>
 
       <main>
+
+
+        
         <section class="resources-section">
           <h2>Medžiagos biblioteka</h2>
+
+          <div class="resource-card">
+            <div class="resource-info">
+              <div class="resource-header">
+                <span class="resource-category">Matematika</span>
+              </div>
+              <h4>Tikimybės</h4>
+              <p class="resource-meta">
+                <span class="update-date">Atnaujinta 2025-05-08</span>
+              </p>
+              <p class="resource-description">
+                Šiame konspekte apžvelgiamas mokyklinis tikimybių teorijos kursas pagal atnaujintą programą. Vienoje vietoje šis 
+                konspektas truputį išeina iš mokyklinės programos ribų (trumpai aptariama sąlyginė tikimybė). Tačiau sąlyginė tikimybė 
+                pristatoma tik tam, kad prasmingai galėtų būti apibrėžta mokyklinė sąvoka – nepriklausomi įvykiai.
+                Autorius V. Miežys
+              </p>
+              <div class="resource-actions">
+                <a
+                  href="./Tikimybių-teorijos-konspektas-(autorius-V.Miežys).pdf"
+                  class="btn btn-preview"
+                  onclick="incrementCounter('id3', 'views')"
+                >
+                  <span class="btn-icon">&#128065;</span>
+                  Peržiūrėti
+                  <span id="id3-2">(...)</span>
+                </a>
+                <a
+                  download
+                  href="./Tikimybių-teorijos-konspektas-(autorius-V.Miežys).pdf"
+                  class="btn btn-download"
+                  onclick="incrementCounter('id3', 'downloads')"
+  
+                >
+                  <span class="btn-icon">&#8595;</span>
+                  Atsisiųsti
+                  <span id="id3-1">(...)</span>
+                </a>
+              </div>
+            </div>
+          </div> 
 
           <div class="resource-card">
             <div class="resource-info">
@@ -170,17 +212,19 @@
               </div>
             </div>
         </section>
+
+        
       </main>
 
       <footer class="site-footer">
         <div class="footer-content">
           <p>Autorinės teisės priklauso paminėtiems autoriams</p>
           <p>
-            Kontaktai: Naglis
+            Kontaktai: Naglis Šuliokas
             <a href="mailto:naglis.suliokas@gmail.com"
               >naglis.suliokas@gmail.com</a
             >
-            ir Rokas <a href="mailto:info@edup.lt">info@edup.lt</a>
+            ir Rokas Rutkus <a href="mailto:info@edup.lt">info@edup.lt</a>
           </p>
           <p>
             Tinklapio kodas:
