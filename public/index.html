@@ -68,7 +68,7 @@
         });
       }
 
-      ["id1", "id2", "id3"].forEach((id) => {
+      ["id1", "id2", "id3", "id4"].forEach((id) => {
         initializeCounter(id);
         listenToCounter(id);
       });
@@ -90,13 +90,48 @@
 
         </div>
       </header>
-
       <main>
-
-
-        
+     
         <section class="resources-section">
           <h2>Medžiagos biblioteka</h2>
+
+          <div class="resource-card">
+            <div class="resource-info">
+              <div class="resource-header">
+                <span class="resource-category">Matematika</span>
+              </div>
+              <h4>Pirmykštės funkcijos ir neapibrėžtiniai integralai</h4>
+              <p class="resource-meta">
+                <span class="update-date">Atnaujinta 2025-05-08</span>
+              </p>
+              <p class="resource-description">
+                Pirmykščių funkcijų ir neapibrėžtinių integralų atmintinė su pavyzdžiais.
+                Autorius D. Sakavičius
+              </p>
+              <div class="resource-actions">
+                <a
+                  href="./Integralų-skaičiavimas-(Autorius-D.Sakavičius).pdf"
+                  class="btn btn-preview"
+                  onclick="incrementCounter('id4', 'views')"
+                >
+                  <span class="btn-icon">&#128065;</span>
+                  Peržiūrėti
+                  <span id="id4-2">(...)</span>
+                </a>
+                <a
+                  download
+                  href="./Integralų-skaičiavimas-(Autorius-D.Sakavičius).pdf"
+                  class="btn btn-download"
+                  onclick="incrementCounter('id4', 'downloads')"
+  
+                >
+                  <span class="btn-icon">&#8595;</span>
+                  Atsisiųsti
+                  <span id="id4-1">(...)</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
           <div class="resource-card">
             <div class="resource-info">
