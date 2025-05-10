@@ -13,3 +13,4 @@ git push
 ```
 firebase deploy
 ```
+git checkout -b stereometrija
