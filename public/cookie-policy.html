@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slapukų politika - Mokytojai mokytojams</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Slapukų sutikimo valdymo skriptas -->
+    <script src="cookies.js"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.0/firebase-app.js";
+      import { getDatabase } from "https://www.gstatic.com/firebasejs/11.7.0/firebase-database.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAgr6yJwR8hSCyzP-YuSm7x0jyG6gauV48",
+        authDomain: "mokytojai-mokytojams.firebaseapp.com",
+        databaseURL:
+          "https://mokytojai-mokytojams-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "mokytojai-mokytojams",
+        storageBucket: "mokytojai-mokytojams.firebasestorage.app",
+        messagingSenderId: "1034426927970",
+        appId: "1:1034426927970:web:19115cc4b4496dde123a3b",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+    </script>
+
+    <style>
+      .policy-content {
+        background-color: var(--background-light);
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .policy-content h2 {
+        color: var(--primary-color);
+        margin-bottom: var(--spacing-md);
+        padding-bottom: var(--spacing-xs);
+        border-bottom: 2px solid var(--primary-color);
+      }
+
+      .policy-content h3 {
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-sm);
+        color: var(--text-dark);
+      }
+
+      .policy-table {
+        width: 100%;
+        max-width: 700px;
+        border-collapse: collapse;
+        margin: var(--spacing-md) 0;
+        font-size: 0.9rem;
+      }
+
+      .policy-table th,
+      .policy-table td {
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .policy-table th {
+        background-color: var(--secondary-color);
+        font-weight: 600;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: var(--spacing-lg);
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <div class="header-content">
+          <h1>Mokytojai mokytojams</h1>
+          <p class="tagline">Dalijamės žiniomis, auginame ateitį</p>
+        </div>
+      </header>
+
+      <main>
+        <a href="index.html" class="back-link">← Grįžti į pagrindinį puslapį</a>
+
+        <div class="policy-content">
+          <h2>Slapukų politika</h2>
+
+          <p>
+            Šiame puslapyje pateikiama informacija apie tai, kaip „Mokytojai mokytojams" svetainė naudoja slapukus ir panašias technologijas.
+          </p>
+
+          <h3>Kas yra slapukai?</h3>
+          <p>
+            Slapukai (angl. cookies) yra maži tekstiniai failai, kuriuos jūsų naršyklė išsaugo jūsų įrenginyje (kompiuteryje, planšetėje, telefone) kai lankotės interneto svetainėse. 
+            Jie plačiai naudojami, kad interneto svetainės veiktų efektyviau ir teiktų informaciją svetainių savininkams.
+          </p>
+
+          <h3>Kokius slapukus naudojame?</h3>
+          <p>
+            Mūsų svetainėje naudojame šių kategorijų slapukus:
+          </p>
+
+          <table class="policy-table">
+            <thead>
+              <tr>
+                <th>Slapukai</th>
+                <th>Paskirtis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Būtinieji</strong></td>
+                <td>Būtini svetainės veikimui, negali būti išjungti</td>
+              </tr>
+              <tr>
+                <td><strong>Analitiniai</strong></td>
+                <td>Leidžia stebėti lankytojų veiklą ir tobulinti svetainę</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Google Analytics</h3>
+          <p>
+            Mūsų svetainė naudoja Google Analytics, interneto analitikos paslaugą, kurią teikia Google, Inc. Google Analytics naudoja slapukus, kad padėtų svetainei analizuoti, kaip lankytojai naudojasi svetaine. 
+            Informacija, sugeneruota slapuko apie jūsų naudojimąsi svetaine (įskaitant jūsų IP adresą), bus perduota ir saugoma Google serveriuose. 
+          </p>
+          <p>
+            Google naudos šią informaciją, kad įvertintų jūsų naudojimąsi svetaine, sudarytų ataskaitas apie svetainės veiklą svetainės operatoriams ir teiktų kitas paslaugas, susijusias su svetainės veikla ir interneto naudojimu. 
+            Google taip pat gali perduoti šią informaciją trečiosioms šalims, jei to reikalauja įstatymai arba jei tokios trečiosios šalys tvarko informaciją Google vardu.
+          </p>
+
+          <h3>Kaip valdyti slapukus?</h3>
+          <p>
+            Jūs galite valdyti ir (arba) ištrinti slapukus savo nuožiūra. Galite ištrinti visus jūsų kompiuteryje jau esančius slapukus, o daugumoje naršyklių galite nustatyti, kad slapukai nebūtų išsaugomi. 
+          </p>
+          <p>
+            Norėdami pakeisti savo sutikimo nustatymus mūsų svetainėje, spustelėkite nuorodą „Slapukų nuostatos" puslapio apačioje.
+          </p>
+
+          <h3>Jūsų teisės</h3>
+          <p>
+            Pagal Bendrąjį duomenų apsaugos reglamentą (BDAR), jūs turite teisę:
+          </p>
+          <ul>
+            <li>Žinoti, kokie jūsų asmens duomenys tvarkomi</li>
+            <li>Prašyti prieigos prie savo asmens duomenų</li>
+            <li>Reikalauti ištaisyti neteisingus, netikslius ar neišsamius asmens duomenis</li>
+            <li>Reikalauti ištrinti savo asmens duomenis</li>
+            <li>Apriboti savo asmens duomenų tvarkymą</li>
+            <li>Nesutikti su savo asmens duomenų tvarkymu</li>
+          </ul>
+
+          <h3>Kontaktai</h3>
+          <p>
+            Jei turite klausimų apie mūsų slapukų politiką, prašome susisiekti su mumis:
+          </p>
+          <p>
+            <strong>Naglis Šuliokas</strong> – <a href="mailto:naglis.suliokas@gmail.com">naglis.suliokas@gmail.com</a><br>
+            <strong>Rokas Rutkus</strong> – <a href="mailto:info@edup.lt">info@edup.lt</a>
+          </p>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-content">
+          <p>Autorinės teisės priklauso paminėtiems autoriams</p>
+          <p>
+            Kontaktai: Naglis Šuliokas
+            <a href="mailto:naglis.suliokas@gmail.com"
+              >naglis.suliokas@gmail.com</a
+            >
+            ir Rokas Rutkus <a href="mailto:info@edup.lt">info@edup.lt</a>
+          </p>
+          <p>
+            Tinklapio kodas:
+            <a
+              href="https://github.com/naglissul/mokytojai-mokytojams"
+              target="_blank"
+            >
+              github.com/naglissul/mokytojai-mokytojams
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html> 
