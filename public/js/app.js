@@ -128,4 +128,22 @@ function showContent(page) {
   
   // Pakeisti puslapio pavadinimą
   document.title = `${page.charAt(0).toUpperCase() + page.slice(1)} - Mokytojai mokytojams`;
-} 
+}
+
+// Inicializuojame skaitliukus dokumentui užsikrovus
+document.addEventListener('DOMContentLoaded', function() {
+  // Konspektų skaitliukai
+  const konspektaiIds = ["integralai", "tikimybes", "funkcijos", "planimetrija", "funkcijos2"];
+  
+  // Bandomųjų skaitliukai
+  const bandomiejiIds = [
+    "vbe-salyga-a", "vbe-vertinimas-a", "vbe-salyga-b", "vbe-vertinimoinstrukcija-b",
+    "vbe-salyga-1dalisa", "vbe-vertinimas-1dalisa"
+  ]; 
+  
+  // Inicializuojame visus skaitliukus
+  [...konspektaiIds, ...bandomiejiIds].forEach(id => {
+    initializeCounter(id);
+    listenToCounter(id);
+  });
+}); 

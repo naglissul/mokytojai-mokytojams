@@ -76,9 +76,9 @@
       }
 
       // Konspektų skaitliukai
-      const konspektaiIds = ["integralai", "tikimybes", "funkcijos", "planimetrija"];
+      const konspektaiIds = ["integralai", "tikimybes", "funkcijos", "planimetrija", "funkcijos2"];
       // Bandomųjų skaitliukai
-      const bandomiejiIds = ["vbe-salyga-a", "vbe-vertinimas-a", "vbe-salyga-b", "vbe-vertinimoinstrukcija-b"];
+      const bandomiejiIds = ["vbe-salyga-a", "vbe-vertinimas-a", "vbe-salyga-b", "vbe-vertinimoinstrukcija-b", "vbe-salyga-1dalisa", "vbe-vertinimas-1dalisa"];
       
       // Inicializuoti visus skaitliukus
       document.addEventListener('DOMContentLoaded', function() {
@@ -102,6 +102,17 @@
       });
     </script>
     <script type="module" src="js/app.js"></script>
+    <script type="module">
+      import { countAPI } from './js/app.js';
+      // Skaičiavimo inicializavimas
+      document.addEventListener('DOMContentLoaded', function() {
+        // Inicializuojame visus skaitliukus
+        const allIds = ["integralai", "tikimybes", "funkcijos", "planimetrija", "funkcijos2", 
+                        "vbe-salyga-a", "vbe-vertinimas-a", "vbe-salyga-b", "vbe-vertinimoinstrukcija-b",
+                        "vbe-salyga-1dalisa", "vbe-vertinimas-1dalisa"];
+        countAPI.init(allIds);
+      });
+    </script>
     
     <script>
       // Paslepiame sekcijas išskyrus aktyvią
@@ -181,6 +192,43 @@
         <!-- Konspektų sekcija -->
         <section id="konspektai-section" class="content-section resources-section">
           <h2>Medžiagos biblioteka</h2>
+
+          <div class="resource-card">
+            <div class="resource-info">
+              <div class="resource-header">
+                <span class="resource-category">Matematika</span>
+              </div>
+              <h4>Funkcijos 2</h4>
+              <p class="resource-meta">
+                <span class="update-date">Atnaujinta 2025-05-20</span>
+              </p>
+              <p class="resource-description">
+                Atvaizduojamos įvairios funkcijų transformacijos, modulio grafikas, funkcijų lyginumas, funkcijos apibrėžtis bei ribos.
+                Autoriai: Z. Šiaulienė, R. Rutkus
+              </p>
+              <div class="resource-actions">
+                <a
+                  href="./pdf/konspektai/Konspektas Funkcijos 2.pdf"
+                  class="btn btn-preview"
+                  onclick="incrementCounter('funkcijos2', 'views')"
+                >
+                  <span class="btn-icon">&#128065;</span>
+                  Peržiūrėti
+                  <span id="funkcijos2-2">(...)</span>
+                </a>
+                <a
+                  download
+                  href="./pdf/konspektai/Konspektas Funkcijos 2.pdf"
+                  class="btn btn-download"
+                  onclick="incrementCounter('funkcijos2', 'downloads')"
+                >
+                  <span class="btn-icon">&#8595;</span>
+                  Atsisiųsti
+                  <span id="funkcijos2-1">(...)</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
           <div class="resource-card">
             <div class="resource-info">
@@ -335,6 +383,73 @@
         <!-- Bandomųjų sekcija -->
         <section id="bandomieji-section" class="content-section resources-section">
           <h2>Bandomieji darbai</h2>
+
+          <!-- Matematikos bandomasis (1 dalis, išplėstinis kursas) -->
+          <div class="resource-card">
+            <div class="resource-info">
+              <div class="resource-header">
+                <span class="resource-category">Matematika</span>
+              </div>
+              <h4>Matematikos bandomasis (1 dalis, išplėstinis kursas)</h4>
+              <p class="resource-meta">
+                <span class="update-date">Atnaujinta 2025-05-21</span>
+              </p>
+              <p class="resource-description">
+                1 dalies išplėstinio kurso matematikos bandomasis darbas.
+                Autorius: Nojus Jokūbaitis
+              </p>
+              <div class="resource-actions">
+                <div class="resource-actions-group">
+                  <h5>Sąlyga:</h5>
+                  <div class="buttons-container">
+                    <a
+                      href="./pdf/bandomieji/Vbe 1 dalis_Išplėstinis kursas_Nojus Jokūbaitis.pdf"
+                      class="btn btn-preview"
+                      onclick="incrementCounter('vbe-salyga-1dalisa', 'views')"
+                    >
+                      <span class="btn-icon">&#128065;</span>
+                      Peržiūrėti
+                      <span id="vbe-salyga-1dalisa-2">(...)</span>
+                    </a>
+                    <a
+                      download
+                      href="./pdf/bandomieji/Vbe 1 dalis_Išplėstinis kursas_Nojus Jokūbaitis.pdf"
+                      class="btn btn-download"
+                      onclick="incrementCounter('vbe-salyga-1dalisa', 'downloads')"
+                    >
+                      <span class="btn-icon">&#8595;</span>
+                      Atsisiųsti
+                      <span id="vbe-salyga-1dalisa-1">(...)</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="resource-actions-group">
+                  <h5>Vertinimo instrukcija:</h5>
+                  <div class="buttons-container">
+                    <a
+                      href="./pdf/bandomieji/Vertinimo_instrukcija_išplėstinis_11 klasė (1).pdf"
+                      class="btn btn-preview"
+                      onclick="incrementCounter('vbe-vertinimas-1dalisa', 'views')"
+                    >
+                      <span class="btn-icon">&#128065;</span>
+                      Peržiūrėti
+                      <span id="vbe-vertinimas-1dalisa-2">(...)</span>
+                    </a>
+                    <a
+                      download
+                      href="./pdf/bandomieji/Vertinimo_instrukcija_išplėstinis_11 klasė (1).pdf"
+                      class="btn btn-download"
+                      onclick="incrementCounter('vbe-vertinimas-1dalisa', 'downloads')"
+                    >
+                      <span class="btn-icon">&#8595;</span>
+                      Atsisiųsti
+                      <span id="vbe-vertinimas-1dalisa-1">(...)</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- VBE Matematikos A lygio bandomasis darbas -->
           <div class="resource-card">
